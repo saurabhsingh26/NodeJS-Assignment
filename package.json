@@ -1,13 +1,13 @@
 {
   "name": "nodejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "NodeJS Assignment",
   "main": "index.js",
   "scripts": {
     "start":"nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Saurabh Singh",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",

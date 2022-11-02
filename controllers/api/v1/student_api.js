@@ -1,4 +1,6 @@
 const Student = require('../../../models/student');
+
+// Post request
 module.exports.create = async function(req,res){
     try{
         const student = await Student.create(req.body);
@@ -15,6 +17,8 @@ module.exports.create = async function(req,res){
         })
     }
 }
+
+// Get request
 module.exports.allStudents = async function(req,res){
     try{
         const students = await Student.find({});
@@ -32,6 +36,7 @@ module.exports.allStudents = async function(req,res){
     }
 }
 
+// Get request
 module.exports.studentById = async function(req,res){
     try{
         const students = await Student.findById(req.params.id);
@@ -48,6 +53,8 @@ module.exports.studentById = async function(req,res){
         });
     }
 }
+
+// Post request
 module.exports.update = async function(req,res){
     try{
         const students = await Student.findByIdAndUpdate(req.params.id,{name:req.body.name},{new:true})
@@ -66,6 +73,7 @@ module.exports.update = async function(req,res){
     }
 }
 
+// Delete request
 module.exports.delete = async function(req,res){
     try{
         const students = await Student.findByIdAndDelete(req.params.id)
